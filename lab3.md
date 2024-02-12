@@ -11,9 +11,9 @@ public void testManyAppend() {
     input1.append(24);
     input1.append(23);
 
-    assertEquals(input1.root.value, 10);
-    assertEquals(input1.root.next.value, 24);
-    assertEquals(input1.root.next.next.value, 23);
+    assertEquals(10, input1.root.value);
+    assertEquals(24, input1.root.next.value);
+    assertEquals(23, input1.root.next.next.value);
 }
 ```
 
@@ -24,13 +24,13 @@ public void testManyAppend() {
 public void testOneAppend() {
     LinkedList input1 = new LinkedList();
     input1.append(5);
-    assertEquals(input1.root.value, 5);
+    assertEquals(5, input1.root.value);
 }
 ```
 
 ### Symptoms With Failure
 
-There is an infinite loop, and I mustr Ctrl+C to exit.
+There is an infinite loop, and I must Ctrl+C to exit.
 
 ![junit tests with infinite loops](lab3/symptom_with_failure.png)
 
